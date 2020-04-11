@@ -1,0 +1,21 @@
+html
+  include partials/head
+  
+body
+  h1 TV Synopsis
+  h2= showdata.title
+
+  h3 Developed By
+  ul
+    for developedBy in showdata.developedBy
+      li= developedBy
+
+  h3 Staring
+  ul
+    for star in showdata.starring
+      li= star
+
+  h3 Seasons
+  ul
+    for season in showdata.seasons
+      li Season: #{season.number}
