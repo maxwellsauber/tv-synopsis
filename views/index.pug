@@ -1,21 +1,17 @@
 html
   include partials/head
-  
 body
-  h1 TV Synopsis
-  h2= showdata.title
-
-  h3 Developed By
+  h1= showdata.title
+  h2 Developed By
   ul
-    for developedBy in showdata.developedBy
-      li= developedBy
-
-  h3 Staring
+    for developer in showdata.developedBy
+      li= developer
+  h2 Staring
   ul
     for star in showdata.starring
       li= star
-
-  h3 Seasons
+  h2 Seasons
   ul
     for season in showdata.seasons
-      li Season: #{season.number}
+      li 
+        a(href=`/season/${season.number}`) Season #{season.number}
