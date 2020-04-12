@@ -12,21 +12,15 @@ app.get('/season/:season', (request, response) => {
   const requestedSeason = parseInt(request.params.season)
 
   if (requestedSeason <= showdata.seasons.length) {
-    const validSeason = showdata.seasons.find((season) => season.number === requestedSeason)
-
     return response.render('season', {
       title: showdata.title,
-      season: validSeason
+      season: showdata.seasons.find((season) => season.number === requestedSeason)
     })
   }
-  else {
-    return response.status(404).send('This Season Does Not Exist')
-  }
+  else response.status(404).send('This Season Does Not Exist')
 })
 
-app.all('*', (request, response) => {
-  return response.sendStatus(404)
-})
+app.all('*', (request, response) => response.sendStatus(404))
 
 app.listen(7779, () => {
   console.log('PORT 7779 is listening...') // eslint-disable-line no-console
