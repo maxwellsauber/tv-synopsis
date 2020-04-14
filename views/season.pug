@@ -2,7 +2,7 @@ html
   include partials/head
 body
   h1= title
-  h2(class='season-heading') Season #{season.number}
+  h2.season-heading Season #{season.number}
   table
     thead
       tr
@@ -12,8 +12,8 @@ body
     tbody    
      for episode in season.episodes
       tr
-        td= episode.number
-        td= episode.title
-        td= episode.director
+        td.episode-number= episode.number
+        td.episode-title= episode.title
+        td.episode-director= episode.director
       tr
         td(colspan=3)= episode.synopsis
