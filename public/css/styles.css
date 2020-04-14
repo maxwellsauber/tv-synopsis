@@ -10,13 +10,16 @@ table{
   margin:0 auto;
   width:85%;
 }
+td, th{
+    border: 1px solid #000;
+    padding:10px;
+}
 thead{
   background-color: #6495ed;
   color: #fff;
 }
-td, th{
-    border: 1px solid #000;
-    padding:10px;
+.episode-director, .episode-title{
+  padding-left:20px;
 }
 .episode-number{
   text-align: center;
@@ -24,9 +27,6 @@ td, th{
 }
 .episode-title{
   width:65%;
-}
-.episode-title, .episode-director{
-  padding-left:20px;
 }
 .show-info{
   margin-left:30px;
