@@ -1,5 +1,5 @@
 a{
-  color: 6495ed;
+  color: #6495ed;
   text-decoration: none;
 }
 h2.season-heading{
@@ -17,9 +17,6 @@ thead{
 td, th{
     border: 1px solid #000;
     padding:10px;
-}
-.episode-director{
-  width:30%;
 }
 .episode-number{
   text-align: center;
